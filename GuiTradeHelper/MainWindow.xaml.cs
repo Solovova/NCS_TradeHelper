@@ -12,19 +12,6 @@ namespace SoloVova.TradeHelper.GuiTradeHelper{
             InitializeComponent();
         }
         
-        private void ButtonRefresh_OnClick(object sender, RoutedEventArgs e)
-        {
-            Wallet wallet = new Wallet();
-            Task<decimal> sum = wallet.GetTotalSum();
-
-            sum.ContinueWith(res =>
-            {
-                this.Dispatcher.Invoke(() =>
-                {
-                    this.txtWallet.Content = res.Result.ToString(CultureInfo.InvariantCulture);
-                });
-            });
-
-        }
+        
     }
 }
