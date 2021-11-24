@@ -1,25 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Globalization;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet;
 
-namespace GuiTradeHelper{
+namespace SoloVova.TradeHelper.GuiTradeHelper{
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window{
         public MainWindow(){
             InitializeComponent();
+        }
+        
+        private void ButtonRefresh_OnClick(object sender, RoutedEventArgs e)
+        {
+            Wallet wallet = new Wallet();
+            Task<decimal> sum = wallet.GetTotalSum();
+
+            sum.ContinueWith(res =>
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    this.txtWallet.Content = res.Result.ToString(CultureInfo.InvariantCulture);
+                });
+            });
+
         }
     }
 }
