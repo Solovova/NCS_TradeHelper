@@ -11,15 +11,11 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100" />
-                <ColumnDefinition Width="100" />
-                
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Grid.Row="0" Content="Refresh" Click="ButtonRefresh_OnClick"></Button>
-            <TextBox x:Name="tb" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"></TextBox>
-        </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Content="Refresh" Click="ButtonRefresh_OnClick" />
+        <TextBox Grid.Row="1" x:Name="tb" Grid.Column="0" Grid.ColumnSpan="2" />
     </Grid>
 </Window>
