@@ -1,9 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Binance.Net.Objects.Spot.MarketData;
 using CryptoExchange.Net.Objects;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev;
 
-namespace SoloVova.TradeHelper.LibMarket.LowApi
+namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.LowApi
 {
     public static class ApiExchange
     {
