@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:SoloVova.TradeHelper.GuiTradeHelper"
       mc:Ignorable="d"
-      Title="PageTestApi" Height="450" Width="800">
+      Title="PageTestApi" Height="Auto" Width="Auto">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
@@ -16,6 +16,6 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Button Grid.Row="0" Grid.Column="0" Content="Get" Click="ButtonRefresh_OnClick" />
-        <TextBox Grid.Row="1" x:Name="tb" Grid.Column="0" Grid.ColumnSpan="2" />
+        <TextBox Grid.Row="1" x:Name="tb" Grid.Column="0" Grid.ColumnSpan="2"  VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Page>
