@@ -1,11 +1,12 @@
 ﻿using System.Globalization;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet;
 
 namespace SoloVova.TradeHelper.GuiTradeHelper{
-    public partial class WindowWalletSimple : Window{
-        public WindowWalletSimple(){
+    public partial class PageWallet : Page{
+        public PageWallet(){
             InitializeComponent();
         }
         

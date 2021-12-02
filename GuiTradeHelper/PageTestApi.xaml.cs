@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using Binance.Net.Interfaces;
 using CryptoExchange.Net.Objects;
 using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.LowApi;
 using Utf8Json;
 
 namespace SoloVova.TradeHelper.GuiTradeHelper{
-    public partial class WindowTestTrade : Window{
-        public WindowTestTrade(){
+    public partial class PageTestApi : Page{
+        public PageTestApi(){
             InitializeComponent();
         }
         
@@ -19,7 +20,7 @@ namespace SoloVova.TradeHelper.GuiTradeHelper{
             {
                 this.Dispatcher.Invoke(() => {
                     if (res.IsCompletedSuccessfully){
-                        this.tb.Text = "Ok\n"+JsonSerializer.ToJsonString(res.Result.Data);    
+                        this.tb.Text = "Ok\n"+JsonSerializer.PrettyPrint(JsonSerializer.ToJsonString(res.Result.Data));    
                     }
                     else{
                         this.tb.Text = "Error:" + res.Exception?.Message;
