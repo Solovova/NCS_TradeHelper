@@ -7,15 +7,23 @@
       mc:Ignorable="d"
       Title="PageTestApi" Height="Auto" Width="Auto">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="0" Grid.Column="0" Content="Get" Click="ButtonRefresh_OnClick" />
-        <TextBox Grid.Row="1" x:Name="tb" Grid.Column="0" Grid.ColumnSpan="2"  VerticalScrollBarVisibility="Auto"/>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Content="TradeHistory" Click="Button_TradeHistory_OnClick" Margin="3"/>
+            <Button Grid.Row="1" Content="Products" Click="Button_Products_OnClick" Margin="3"/>
+            <Button Grid.Row="2" Content="UserCoins" Click="Button_UserCoins_OnClick" Margin="3"/>
+        </Grid>
+        
+        <TextBox x:Name="Tb" Grid.Column="1"  VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Page>

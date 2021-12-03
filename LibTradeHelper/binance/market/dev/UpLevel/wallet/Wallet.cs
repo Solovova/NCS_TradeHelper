@@ -50,8 +50,8 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet{
         public async Task Refresh(){
             AwaitersQueue awaitersWallets = new();
             awaitersWallets.Add(
-                new GetAwaiter<BinanceMarginAccount>(this.CallBackMargin, ApiWallet.GetMarginAccountInfoAsync));
-            awaitersWallets.Add(new GetAwaiter<BinanceAccountInfo>(this.CallBackSpot, ApiWallet.GetAccountInfoAsync));
+                new GetAwaiter<BinanceMarginAccount>(this.CallBackMargin, ApiMargin.GetMarginAccountInfoAsync));
+            awaitersWallets.Add(new GetAwaiter<BinanceAccountInfo>(this.CallBackSpot, ApiGeneral.GetAccountInfoAsync));
 
             awaitersWallets.Run();
             await awaitersWallets.Join();
@@ -74,7 +74,7 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet{
             AwaitersQueue awaitersPrices = new();
             foreach (string symbol in symbols){
                 awaitersPrices.Add(
-                    new GetAwaiter<BinancePrice, string>(this.CallBackPrice, ApiExchange.GetPriceAsync, symbol));
+                    new GetAwaiter<BinancePrice, string>(this.CallBackPrice, ApiSpot.GetPriceAsync, symbol));
             }
 
             awaitersPrices.Run();
