@@ -5,7 +5,7 @@ using Binance.Net.Objects.Spot.SpotData;
 using Binance.Net.Objects.Spot.WalletData;
 using CryptoExchange.Net.Objects;
 
-namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.LowApi{
+namespace SoloVova.TradeHelper.LibTradeHelper.binance.LowApi{
     public static class ApiGeneral{
         public static async Task<WebCallResult<BinanceAccountInfo>> GetAccountInfoAsync(){
             return await ContextMarket.Instance().Client.General.GetAccountInfoAsync();

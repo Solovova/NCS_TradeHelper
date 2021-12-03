@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using Binance.Net.Objects.Spot.WalletData;
 using CryptoExchange.Net.Objects;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.LowApi;
+using SoloVova.TradeHelper.LibTradeHelper.binance.LowApi;
 using SoloVova.TradeHelper.LibTradeHelper.context;
 using Utf8Json;
 
-namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.products{
+namespace SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.products{
     public class Products{
         public IEnumerable<BinanceUserCoin>? BinanceUserCoin;
 
@@ -23,21 +22,6 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.product
             return this;
         }
 
-        public async Task<List<string>> GetDif(){
-            this.LoadFromJson();
-            List<string> result = new List<string>();
-            await ApiGeneral.GetUserCoins().ContinueWith(res => {
-                if (res.IsCompletedSuccessfully && BinanceUserCoin != null){
-                    var dif =
-                        res.Result.Data.Where(p => BinanceUserCoin.All(l => p.Coin != l.Coin));
-                    result = dif.Select(i => i.Coin).ToList();
-                    BinanceUserCoin = res.Result.Data;
-                    this.SaveToJson();
-                }
-            });
-            return result;
-        }
-
         private void OnGetUserCoin(Task<WebCallResult<IEnumerable<BinanceUserCoin>>> res){
             if (res.IsCompletedSuccessfully){
                 this.BinanceUserCoin = res.Result.Data;
@@ -45,14 +29,14 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.product
             }
         }
 
-        private void SaveToJson(){
+        public void SaveToJson(){
             string fileName = Resources.GetAppRootFullName("cache\\binanceUserCoin.json");
             using StreamWriter file = File.CreateText(fileName);
             string str = JsonSerializer.ToJsonString(BinanceUserCoin) ?? "";
             file.Write(str);
         }
 
-        private void LoadFromJson(){
+        public void LoadFromJson(){
             string fileName = Resources.GetAppRootFullName("cache\\binanceUserCoin.json");
             if (!File.Exists(fileName)) return;
             using StreamReader file = File.OpenText(fileName);

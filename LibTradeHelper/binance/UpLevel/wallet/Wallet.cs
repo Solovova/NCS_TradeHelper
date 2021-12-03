@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Binance.Net.Objects.Spot.MarginData;
 using Binance.Net.Objects.Spot.MarketData;
 using Binance.Net.Objects.Spot.SpotData;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.LowApi;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.Tasks;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.Tasks.Awaiters;
+using SoloVova.TradeHelper.LibTradeHelper.binance.LowApi;
+using SoloVova.TradeHelper.LibTradeHelper.binance.Tasks;
+using SoloVova.TradeHelper.LibTradeHelper.binance.Tasks.Awaiters;
 
-namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet{
+namespace SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.wallet{
     public class Wallet{
         private readonly List<WalletRow> _rows = new List<WalletRow>();
         private const string BaseSymbol = "USDT";

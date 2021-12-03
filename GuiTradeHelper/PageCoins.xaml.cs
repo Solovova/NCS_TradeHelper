@@ -1,7 +1,8 @@
 ﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.products;
+using SoloVova.TradeHelper.LibTradeHelper.binance.HelpFunctions;
+using SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.products;
 
 namespace SoloVova.TradeHelper.GuiTradeHelper{
     public partial class PageCoins : Page{
@@ -26,11 +27,8 @@ namespace SoloVova.TradeHelper.GuiTradeHelper{
         }
 
         private void Button_Dif_OnClick(object sender, RoutedEventArgs e){
-            _products.GetDif().ContinueWith(res => {
-                string allCoins = "Ok\n";
-                foreach (var bc in res.Result){
-                    allCoins += bc + "\n";
-                }
+            ProductsDif.GetDif(_products).ContinueWith(res => {
+                string allCoins = "Ok\n"+res.Result.Aggregate((a, b) => a + "\n" + b);
                 this.Dispatcher.Invoke(() => { this.Tb.Text = allCoins; });
             });
         }

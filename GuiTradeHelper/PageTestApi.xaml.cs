@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using CryptoExchange.Net.Objects;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.LowApi;
+using SoloVova.TradeHelper.LibTradeHelper.binance.LowApi;
 using Utf8Json;
 
 namespace SoloVova.TradeHelper.GuiTradeHelper{

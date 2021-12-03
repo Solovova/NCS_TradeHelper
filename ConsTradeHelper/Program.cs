@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Threading.Tasks;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet;
+using SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.wallet;
 using SoloVova.TradeHelper.LibTradeHelper.context;
 
 namespace SoloVova.TradeHelper.ConsTradeHelper{

@@ -4,7 +4,7 @@ using Binance.Net.Objects;
 using CryptoExchange.Net.Authentication;
 using SoloVova.TradeHelper.LibTradeHelper.context;
 
-namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev
+namespace SoloVova.TradeHelper.LibTradeHelper.binance
 {
     public class ContextMarket
     {

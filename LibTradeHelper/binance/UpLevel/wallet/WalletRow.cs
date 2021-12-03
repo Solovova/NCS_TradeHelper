@@ -1,7 +1,7 @@
 ﻿using Binance.Net.Objects.Spot.MarginData;
 using Binance.Net.Objects.Spot.SpotData;
 
-namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet{
+namespace SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.wallet{
     public class WalletRow{
         private string _symbol = "";
 

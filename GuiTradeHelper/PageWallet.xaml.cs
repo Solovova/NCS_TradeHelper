@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet;
+using SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.wallet;
 
 namespace SoloVova.TradeHelper.GuiTradeHelper{
     public partial class PageWallet : Page{

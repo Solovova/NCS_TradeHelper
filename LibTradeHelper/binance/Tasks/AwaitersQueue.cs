@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.Tasks.Awaiters;
+using SoloVova.TradeHelper.LibTradeHelper.binance.Tasks.Awaiters;
 
-namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.Tasks
+namespace SoloVova.TradeHelper.LibTradeHelper.binance.Tasks
 {
     public class AwaitersQueue
     {

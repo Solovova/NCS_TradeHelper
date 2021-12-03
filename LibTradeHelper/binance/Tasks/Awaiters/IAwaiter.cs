@@ -1,4 +1,4 @@
-﻿namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.Tasks.Awaiters
+﻿namespace SoloVova.TradeHelper.LibTradeHelper.binance.Tasks.Awaiters
 {
     public interface IAwaiter
     {

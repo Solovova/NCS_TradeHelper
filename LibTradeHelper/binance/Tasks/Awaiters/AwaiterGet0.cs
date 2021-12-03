@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using CryptoExchange.Net.Objects;
 
-namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.Tasks.Awaiters
+namespace SoloVova.TradeHelper.LibTradeHelper.binance.Tasks.Awaiters
 {
     public class GetAwaiter<T>: IAwaiter
     {
