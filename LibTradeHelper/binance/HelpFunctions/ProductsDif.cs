@@ -16,6 +16,7 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.HelpFunctions{
                     result = dif.Select(i => i.Coin).ToList();
                     products.BinanceUserCoin = res.Result.Data;
                     products.SaveToJson();
+                    
                 }
             });
             return result;

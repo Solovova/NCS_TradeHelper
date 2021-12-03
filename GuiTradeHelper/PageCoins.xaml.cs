@@ -28,7 +28,7 @@ namespace SoloVova.TradeHelper.GuiTradeHelper{
 
         private void Button_Dif_OnClick(object sender, RoutedEventArgs e){
             ProductsDif.GetDif(_products).ContinueWith(res => {
-                string allCoins = "Ok\n"+res.Result.Aggregate((a, b) => a + "\n" + b);
+                string allCoins = "Ok\n" + string.Concat(res.Result);
                 this.Dispatcher.Invoke(() => { this.Tb.Text = allCoins; });
             });
         }
