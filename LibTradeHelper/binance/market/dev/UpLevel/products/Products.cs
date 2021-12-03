@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Binance.Net.Objects.Spot.WalletData;
 using CryptoExchange.Net.Objects;
@@ -18,7 +19,23 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.product
             else{
                 await ApiGeneral.GetUserCoins().ContinueWith(this.OnGetUserCoin);
             }
+
             return this;
+        }
+
+        public async Task<List<string>> GetDif(){
+            this.LoadFromJson();
+            List<string> result = new List<string>();
+            await ApiGeneral.GetUserCoins().ContinueWith(res => {
+                if (res.IsCompletedSuccessfully && BinanceUserCoin != null){
+                    var dif =
+                        res.Result.Data.Where(p => BinanceUserCoin.All(l => p.Coin != l.Coin));
+                    result = dif.Select(i => i.Coin).ToList();
+                    BinanceUserCoin = res.Result.Data;
+                    this.SaveToJson();
+                }
+            });
+            return result;
         }
 
         private void OnGetUserCoin(Task<WebCallResult<IEnumerable<BinanceUserCoin>>> res){

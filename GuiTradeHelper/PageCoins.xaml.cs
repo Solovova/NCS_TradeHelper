@@ -24,5 +24,15 @@ namespace SoloVova.TradeHelper.GuiTradeHelper{
                 this.Dispatcher.Invoke(() => { this.Tb.Text = allCoins; });
             });
         }
+
+        private void Button_Dif_OnClick(object sender, RoutedEventArgs e){
+            _products.GetDif().ContinueWith(res => {
+                string allCoins = "Ok\n";
+                foreach (var bc in res.Result){
+                    allCoins += bc + "\n";
+                }
+                this.Dispatcher.Invoke(() => { this.Tb.Text = allCoins; });
+            });
+        }
     }
 }
