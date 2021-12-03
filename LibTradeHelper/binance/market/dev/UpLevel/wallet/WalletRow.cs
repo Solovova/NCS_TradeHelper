@@ -5,7 +5,7 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet
 {
     public class WalletRow
     {
-        private string _symbol;
+        private string _symbol = "";
 
         public string Symbol
         {
