@@ -9,15 +9,21 @@ using Utf8Json;
 
 namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.products{
     public class Products{
-        private IEnumerable<BinanceUserCoin>? _binanceUserCoin;
+        public IEnumerable<BinanceUserCoin>? BinanceUserCoin;
 
-        public void Refresh(){
-            ApiGeneral.GetUserCoins().ContinueWith(this.OnGetUserCoin);
+        public async Task<Products> Refresh(bool useCache){
+            if (useCache){
+                this.LoadFromJson();
+            }
+            else{
+                await ApiGeneral.GetUserCoins().ContinueWith(this.OnGetUserCoin);
+            }
+            return this;
         }
 
         private void OnGetUserCoin(Task<WebCallResult<IEnumerable<BinanceUserCoin>>> res){
             if (res.IsCompletedSuccessfully){
-                this._binanceUserCoin = res.Result.Data;
+                this.BinanceUserCoin = res.Result.Data;
                 this.SaveToJson();
             }
         }
@@ -25,8 +31,16 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.product
         private void SaveToJson(){
             string fileName = Resources.GetAppRootFullName("cache\\binanceUserCoin.json");
             using StreamWriter file = File.CreateText(fileName);
-            string str = JsonSerializer.ToJsonString(_binanceUserCoin) ?? "";
+            string str = JsonSerializer.ToJsonString(BinanceUserCoin) ?? "";
             file.Write(str);
+        }
+
+        private void LoadFromJson(){
+            string fileName = Resources.GetAppRootFullName("cache\\binanceUserCoin.json");
+            if (!File.Exists(fileName)) return;
+            using StreamReader file = File.OpenText(fileName);
+            string str = file.ReadToEnd();
+            BinanceUserCoin = JsonSerializer.Deserialize<IEnumerable<BinanceUserCoin>>(str);
         }
     }
 }
