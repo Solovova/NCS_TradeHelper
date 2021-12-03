@@ -9,17 +9,20 @@ namespace SoloVova.TradeHelper.LibTradeHelper.context
     {
         public readonly ConfigBinance ConfigBinance;
         public readonly ConfigDb ConfigDb;
+        public readonly ConfigDefs ConfigDefs;
 
         public Config()
         {
             this.ConfigBinance = Config.LoadFromJson<ConfigBinance>("secure\\");
             this.ConfigDb = Config.LoadFromJson<ConfigDb>("secure\\");
+            this.ConfigDefs = Config.LoadFromJson<ConfigDefs>("");
         }
         
         public void SaveToJson()
         {
             Config.SaveToJson<ConfigBinance>(ConfigBinance,"secure\\");
             Config.SaveToJson<ConfigDb>(ConfigDb,"secure\\");
+            Config.SaveToJson<ConfigDefs>(ConfigDefs,"");
         }
         
         private static T LoadFromJson<T>(string subDir)

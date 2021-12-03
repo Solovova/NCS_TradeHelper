@@ -10,14 +10,20 @@
         <TabControl>
             <TabItem Header="Wallet">
                 <Grid>
-                    <Frame x:Name="CenterFrame0" VerticalAlignment="Stretch" VerticalContentAlignment="Center"
+                    <Frame VerticalAlignment="Stretch" VerticalContentAlignment="Center"
                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Source="PageWallet.xaml" />
                 </Grid>
             </TabItem>
             <TabItem Header="Test Api">
                 <Grid>
-                    <Frame x:Name="CenterFrame1" VerticalAlignment="Stretch" VerticalContentAlignment="Center"
+                    <Frame VerticalAlignment="Stretch" VerticalContentAlignment="Center"
                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Source="PageTestApi.xaml" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Defs">
+                <Grid>
+                    <Frame VerticalAlignment="Stretch" VerticalContentAlignment="Center"
+                           HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Source="PageDefs.xaml" />
                 </Grid>
             </TabItem>
         </TabControl>
