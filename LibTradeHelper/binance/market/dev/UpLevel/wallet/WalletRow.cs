@@ -71,8 +71,8 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.UpLevel.wallet
                 _type = WalletTypeEn.Margin,
                 _free = row.Free,
                 _locked = row.Locked,
-                _total = row.Total,
-                _borrowed = row.Borrowed
+                _total = row.Total ,
+                _borrowed = row.Borrowed + row.Interest
             };
         }
         

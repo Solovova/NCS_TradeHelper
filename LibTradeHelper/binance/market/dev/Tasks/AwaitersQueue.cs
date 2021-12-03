@@ -8,7 +8,7 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.market.dev.Tasks
     public class AwaitersQueue
     {
         private readonly List<IAwaiter> _awaiters = new List<IAwaiter>();
-
+        
         public void Add(IAwaiter awaiter)
         {
             this._awaiters.Add(awaiter);

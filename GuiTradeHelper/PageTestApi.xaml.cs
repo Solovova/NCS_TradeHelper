@@ -22,6 +22,14 @@ namespace SoloVova.TradeHelper.GuiTradeHelper{
         private void Button_UserCoins_OnClick(object sender, RoutedEventArgs e){
             ApiGeneral.GetUserCoins().ContinueWith(this.OnGetResult);
         }
+        
+        private void Button_AccountInfo_OnClick(object sender, RoutedEventArgs e){
+            ApiGeneral.GetAccountInfoAsync().ContinueWith(this.OnGetResult);
+        }
+        
+        private void Button_MarginAccountInfo_OnClick(object sender, RoutedEventArgs e){
+            ApiMargin.GetMarginAccountInfoAsync().ContinueWith(this.OnGetResult);
+        }
 
         private void OnGetResult<T>(Task<WebCallResult<T>> res){
             this.Dispatcher.Invoke(() => {
