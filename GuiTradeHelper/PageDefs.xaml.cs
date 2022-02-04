@@ -2,18 +2,18 @@
 using System.Windows.Controls;
 using SoloVova.TradeHelper.LibTradeHelper.context;
 
-namespace SoloVova.TradeHelper.GuiTradeHelper{
-    public partial class PageDefs : Page{
-        public PageDefs(){
+namespace SoloVova.TradeHelper.GuiTradeHelper {
+    public partial class PageDefs : Page {
+        public PageDefs() {
             InitializeComponent();
         }
 
-        private void ButtonSave_OnClick(object sender, RoutedEventArgs e){
+        private void ButtonSave_OnClick(object sender, RoutedEventArgs e) {
             Context.Instance().Config.ConfigDefs.DefProduct = this.TbDefProduct.Text;
             Context.Instance().Config.SaveToJson();
         }
 
-        private void PageDefs_OnLoaded(object sender, RoutedEventArgs e){
+        private void PageDefs_OnLoaded(object sender, RoutedEventArgs e) {
             this.TbDefProduct.Text = Context.Instance().Config.ConfigDefs.DefProduct ?? "";
         }
     }
