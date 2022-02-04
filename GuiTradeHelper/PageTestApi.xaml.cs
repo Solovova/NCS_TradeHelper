@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using CryptoExchange.Net.Objects;
+using SoloVova.TradeHelper.LibTradeHelper.binance.LowApi;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using CryptoExchange.Net.Objects;
-using SoloVova.TradeHelper.LibTradeHelper.binance.LowApi;
 using Utf8Json;
 
 namespace SoloVova.TradeHelper.GuiTradeHelper {

@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using System.Windows.Controls;
-using SoloVova.TradeHelper.LibTradeHelper.binance.HelpFunctions;
+﻿using SoloVova.TradeHelper.LibTradeHelper.binance.HelpFunctions;
 using SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.products;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace SoloVova.TradeHelper.GuiTradeHelper {
     public partial class PageCoins : Page {

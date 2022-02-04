@@ -1,6 +1,6 @@
-﻿using System;
+﻿using CryptoExchange.Net.Objects;
+using System;
 using System.Threading.Tasks;
-using CryptoExchange.Net.Objects;
 
 namespace SoloVova.TradeHelper.LibTradeHelper.binance.Tasks.Awaiters {
     public class GetAwaiter<TOPar, TIPar0, TIPar1> : IAwaiter {

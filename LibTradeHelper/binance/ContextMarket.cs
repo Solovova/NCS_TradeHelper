@@ -1,8 +1,8 @@
-﻿using System;
-using Binance.Net;
+﻿using Binance.Net;
 using Binance.Net.Objects;
 using CryptoExchange.Net.Authentication;
 using SoloVova.TradeHelper.LibTradeHelper.context;
+using System;
 
 namespace SoloVova.TradeHelper.LibTradeHelper.binance {
     public class ContextMarket {

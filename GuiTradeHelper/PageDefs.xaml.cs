@@ -1,6 +1,6 @@
-﻿using System.Windows;
+﻿using SoloVova.TradeHelper.LibTradeHelper.context;
+using System.Windows;
 using System.Windows.Controls;
-using SoloVova.TradeHelper.LibTradeHelper.context;
 
 namespace SoloVova.TradeHelper.GuiTradeHelper {
     public partial class PageDefs : Page {

@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Binance.Net.Objects.Other;
+﻿using Binance.Net.Objects.Other;
 using Binance.Net.Objects.Spot.SpotData;
 using Binance.Net.Objects.Spot.WalletData;
 using CryptoExchange.Net.Objects;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SoloVova.TradeHelper.LibTradeHelper.binance.LowApi {
     public static class ApiGeneral {

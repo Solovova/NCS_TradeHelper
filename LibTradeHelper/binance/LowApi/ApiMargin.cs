@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using Binance.Net.Objects.Spot.MarginData;
+﻿using Binance.Net.Objects.Spot.MarginData;
 using CryptoExchange.Net.Objects;
+using System.Threading.Tasks;
 
 namespace SoloVova.TradeHelper.LibTradeHelper.binance.LowApi {
     public static class ApiMargin {

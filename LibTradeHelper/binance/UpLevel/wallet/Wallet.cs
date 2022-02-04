@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Binance.Net.Objects.Spot.MarginData;
+﻿using Binance.Net.Objects.Spot.MarginData;
 using Binance.Net.Objects.Spot.MarketData;
 using Binance.Net.Objects.Spot.SpotData;
 using SoloVova.TradeHelper.LibTradeHelper.binance.LowApi;
 using SoloVova.TradeHelper.LibTradeHelper.binance.Tasks;
 using SoloVova.TradeHelper.LibTradeHelper.binance.Tasks.Awaiters;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.wallet {
     public class Wallet {

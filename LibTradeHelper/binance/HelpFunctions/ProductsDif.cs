@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using SoloVova.TradeHelper.LibTradeHelper.binance.LowApi;
+using SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.products;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SoloVova.TradeHelper.LibTradeHelper.binance.LowApi;
-using SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.products;
 
 namespace SoloVova.TradeHelper.LibTradeHelper.binance.HelpFunctions {
     public static class ProductsDif {

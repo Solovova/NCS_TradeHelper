@@ -1,6 +1,6 @@
-﻿using System;
+﻿using SoloVova.TradeHelper.LibTradeHelper.context.configs;
+using System;
 using System.IO;
-using SoloVova.TradeHelper.LibTradeHelper.context.configs;
 using Utf8Json;
 
 namespace SoloVova.TradeHelper.LibTradeHelper.context {
