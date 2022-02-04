@@ -15,7 +15,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100" />
                 <ColumnDefinition Width="100" />
-                
+
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Content="Refresh" Click="ButtonRefresh_OnClick"></Button>

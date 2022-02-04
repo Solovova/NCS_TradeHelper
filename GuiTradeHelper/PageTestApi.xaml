@@ -7,7 +7,7 @@
       mc:Ignorable="d"
       Title="PageTestApi" Height="Auto" Width="Auto">
     <Grid>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
             <ColumnDefinition Width="*" />
@@ -26,10 +26,10 @@
             <Button Grid.Row="2" Content="UserCoins" Click="Button_UserCoins_OnClick" Margin="3"/>
             <Button Grid.Row="3" Content="AccountInfo" Click="Button_AccountInfo_OnClick" Margin="3"/>
             <Button Grid.Row="4" Content="MarginAccountInfo" Click="Button_MarginAccountInfo_OnClick" Margin="3"/>
-            
-            
+
+
         </Grid>
-        
+
         <TextBox x:Name="Tb" Grid.Column="1"  VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Page>

@@ -1,5 +1,5 @@
-﻿namespace SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.wallet{
-    public enum WalletTypeEn{
+﻿namespace SoloVova.TradeHelper.LibTradeHelper.binance.UpLevel.wallet {
+    public enum WalletTypeEn {
         Spot,
         Margin
     }

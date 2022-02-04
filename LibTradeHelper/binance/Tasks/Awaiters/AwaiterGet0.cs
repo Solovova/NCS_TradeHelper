@@ -2,10 +2,8 @@
 using System.Threading.Tasks;
 using CryptoExchange.Net.Objects;
 
-namespace SoloVova.TradeHelper.LibTradeHelper.binance.Tasks.Awaiters
-{
-    public class GetAwaiter<T>: IAwaiter
-    {
+namespace SoloVova.TradeHelper.LibTradeHelper.binance.Tasks.Awaiters {
+    public class GetAwaiter<T> : IAwaiter {
         private readonly Action<T> _callback;
         private readonly Operation _call;
         private EnAwaiterStatus _status;
@@ -15,26 +13,21 @@ namespace SoloVova.TradeHelper.LibTradeHelper.binance.Tasks.Awaiters
 
         public EnAwaiterStatus Status => _status;
 
-        public GetAwaiter(Action<T> callback, Operation call)
-        {
+        public GetAwaiter(Action<T> callback, Operation call) {
             this._callback = callback;
             this._call = call;
             this._status = EnAwaiterStatus.DontSend;
         }
 
-        public async void Run()
-        {
+        public async void Run() {
             this._status = EnAwaiterStatus.Waiting;
 
             WebCallResult<T> task = await this._call();
 
-            if (task.Success)
-            {
+            if (task.Success) {
                 this._status = EnAwaiterStatus.Ok;
                 this._callback(task.Data);
-            }
-            else
-            {
+            } else {
                 this._status = EnAwaiterStatus.Error;
             }
         }

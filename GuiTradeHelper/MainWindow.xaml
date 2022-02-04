@@ -26,7 +26,7 @@
                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Source="PageDefs.xaml" />
                 </Grid>
             </TabItem>
-            
+
             <TabItem Header="Coins">
                 <Grid>
                     <Frame VerticalAlignment="Stretch" VerticalContentAlignment="Center"
