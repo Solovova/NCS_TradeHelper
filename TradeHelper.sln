@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsTradeHelper", "ConsTrad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibTradeHelper", "LibTradeHelper\LibTradeHelper.csproj", "{56960E74-596A-443D-878F-0B16225EAEBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibData", "LibData\LibData.csproj", "{0D4ED7FC-59DC-4E9E-AA9A-7FB419CFFDA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{56960E74-596A-443D-878F-0B16225EAEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56960E74-596A-443D-878F-0B16225EAEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56960E74-596A-443D-878F-0B16225EAEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D4ED7FC-59DC-4E9E-AA9A-7FB419CFFDA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4ED7FC-59DC-4E9E-AA9A-7FB419CFFDA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4ED7FC-59DC-4E9E-AA9A-7FB419CFFDA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4ED7FC-59DC-4E9E-AA9A-7FB419CFFDA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
