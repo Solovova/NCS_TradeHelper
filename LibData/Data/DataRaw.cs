@@ -12,6 +12,8 @@ public class DataRaw{
     }
 
     public void OnDataChange(){
-        DataChanged?.Invoke(this, EventArgs.Empty);
+        DataChanged?.Invoke(this, new EventDataRawArgs{
+            Somedata = 10
+        });
     }
 }
